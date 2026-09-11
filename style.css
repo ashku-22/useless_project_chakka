@@ -1,0 +1,348 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: skyblue;
+}
+
+h1 {
+    margin-top: 30px;
+    color: darkgreen;
+}
+
+.start-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: background 0.3s;
+}
+
+.start-btn:hover {
+    background: green;
+}
+
+.scene {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin: 30px auto;
+    background: linear-gradient(to bottom, #90EE90 0%, #7CFC00 70%, #32CD32 100%);
+    border: 4px solid green;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.grass {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to top, #228B22 0%, #32CD32 50%, #90EE90 100%);
+    z-index: 15;
+    overflow: hidden;
+}
+
+.grass::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 8px,
+            rgba(34, 139, 34, 0.3) 8px,
+            rgba(34, 139, 34, 0.3) 10px
+        );
+}
+
+.grass::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 12px,
+            rgba(50, 205, 50, 0.4) 12px,
+            rgba(50, 205, 50, 0.4) 14px
+        );
+}
+
+/* Rabbit */
+.rabbit {
+    position: absolute;
+    left: -100px;
+    bottom: 30px;
+    z-index: 5;
+}
+
+.rabbit-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.rabbit.running .rabbit-img {
+    animation: rabbitRun 0.3s ease-in-out infinite;
+}
+
+@keyframes rabbitRun {
+    0%, 100% {
+        transform: translateY(0) scaleX(1);
+    }
+    50% {
+        transform: translateY(-15px) scaleX(1.1);
+    }
+}
+
+/* Tree area */
+.tree-area {
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+    width: 90px;
+    height: 320px;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            #3E2723 0px,
+            #4E342E 2px,
+            #5D4037 4px,
+            #4E342E 6px,
+            #3E2723 8px
+        ),
+        linear-gradient(180deg, #5D4037 0%, #4E342E 50%, #3E2723 100%);
+    border-radius: 5px 5px 0 0;
+    z-index: 1;
+    box-shadow: 
+        inset -20px 0 40px rgba(0,0,0,0.5),
+        inset 10px 0 20px rgba(255,255,255,0.05),
+        8px 8px 20px rgba(0,0,0,0.3);
+}
+
+.tree-area::before {
+    content: '';
+    position: absolute;
+    top: -160px;
+    left: -100px;
+    width: 290px;
+    height: 240px;
+    background: 
+        radial-gradient(ellipse at 25% 25%, #81C784 0%, transparent 25%),
+        radial-gradient(ellipse at 75% 30%, #66BB6A 0%, transparent 20%),
+        radial-gradient(ellipse at 40% 60%, #4CAF50 0%, transparent 30%),
+        radial-gradient(ellipse at 70% 70%, #388E3C 0%, transparent 25%),
+        radial-gradient(ellipse at 50% 50%, #43A047 0%, #2E7D32 40%, #1B5E20 80%);
+    border-radius: 45% 55% 50% 45%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    filter: blur(0.5px);
+}
+
+.tree-area::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -160px;
+    width: 200px;
+    height: 180px;
+    background: 
+        radial-gradient(ellipse at 30% 30%, #A5D6A7 0%, transparent 20%),
+        radial-gradient(ellipse at 70% 40%, #81C784 0%, transparent 25%),
+        radial-gradient(ellipse at 50% 70%, #66BB6A 0%, transparent 30%),
+        radial-gradient(ellipse at 60% 60%, #4CAF50 0%, #388E3C 50%, #1B5E20 90%);
+    border-radius: 40% 60% 55% 40%;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    filter: blur(0.3px);
+}
+
+/* Second tree */
+.tree-2 {
+    position: absolute;
+    right: 320px;
+    bottom: 0;
+    width: 70px;
+    height: 250px;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            #4E342E 0px,
+            #5D4037 2px,
+            #6D4C41 4px,
+            #5D4037 6px,
+            #4E342E 8px
+        ),
+        linear-gradient(180deg, #6D4C41 0%, #5D4037 50%, #4E342E 100%);
+    border-radius: 4px 4px 0 0;
+    box-shadow: 
+        inset -15px 0 30px rgba(0,0,0,0.4),
+        inset 8px 0 15px rgba(255,255,255,0.05),
+        6px 6px 15px rgba(0,0,0,0.25);
+}
+
+.tree-2::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: -80px;
+    width: 230px;
+    height: 190px;
+    background: 
+        radial-gradient(ellipse at 30% 30%, #C8E6C9 0%, transparent 20%),
+        radial-gradient(ellipse at 70% 35%, #A5D6A7 0%, transparent 25%),
+        radial-gradient(ellipse at 45% 65%, #81C784 0%, transparent 30%),
+        radial-gradient(ellipse at 60% 60%, #66BB6A 0%, #43A047 50%, #2E7D32 90%);
+    border-radius: 42% 58% 48% 42%;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.tree-2::after {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: -120px;
+    width: 150px;
+    height: 130px;
+    background: 
+        radial-gradient(ellipse at 35% 35%, #E8F5E9 0%, transparent 15%),
+        radial-gradient(ellipse at 65% 40%, #C8E6C9 0%, transparent 20%),
+        radial-gradient(ellipse at 55% 65%, #A5D6A7 0%, transparent 25%),
+        radial-gradient(ellipse at 50% 50%, #81C784 0%, #66BB6A 50%, #388E3C 90%);
+    border-radius: 38% 62% 52% 38%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* Jackfruit */
+.jackfruit {
+    position: absolute;
+    right: 120px;
+    top: 80px;
+    z-index: 5;
+}
+
+.jackfruit-img {
+    width: 100px;
+    height: 120px;
+    border-radius: 45% 45% 50% 50%;
+    border: 3px solid #5D4037;
+    display: block;
+    object-fit: cover;
+}
+
+.jackfruit-fallback {
+    display: none;
+    width: 100px;
+    height: 120px;
+    border-radius: 45% 45% 50% 50%;
+    border: 3px solid #5D4037;
+    background: 
+        radial-gradient(ellipse at 30% 30%, #9ACD32 0%, transparent 30%),
+        radial-gradient(ellipse at 70% 40%, #6B8E23 0%, transparent 25%),
+        radial-gradient(ellipse at 40% 70%, #556B2F 0%, transparent 20%),
+        radial-gradient(ellipse at 60% 80%, #8B4513 0%, transparent 15%),
+        linear-gradient(145deg, #556B2F 0%, #6B8E23 30%, #9ACD32 60%, #556B2F 100%);
+    box-shadow: 
+        inset -12px -12px 25px rgba(0,0,0,0.5),
+        inset 3px 3px 10px rgba(255,255,255,0.15),
+        0 0 0 2px #3E2723,
+        5px 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.jackfruit-fallback::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    width: 10px;
+    height: 10px;
+    background: #5D4037;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(93, 64, 55, 0.6);
+}
+
+.jackfruit.falling {
+    animation: fall 1.5s ease-in forwards;
+}
+
+@keyframes fall {
+    0% {
+        top: 50px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 280px;
+        transform: rotate(360deg);
+    }
+}
+
+.text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.next-page-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: #8B0000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: background 0.3s;
+}
+
+.next-page-btn:hover {
+    background: #A52A2A;
+}
+
+.tombstone {
+    position: absolute;
+    left: 530px;
+    bottom: 50px;
+    width: 80px;
+    height: 100px;
+    background: linear-gradient(135deg, #808080 0%, #696969 50%, #505050 100%);
+    border-radius: 40px 40px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #2F4F4F;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 
+        inset -5px -5px 15px rgba(0,0,0,0.3),
+        inset 3px 3px 10px rgba(255,255,255,0.1),
+        5px 5px 15px rgba(0,0,0,0.3);
+    z-index: 5;
+    animation: appear 0.5s ease-out;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

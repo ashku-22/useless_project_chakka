@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jackfruit Rabbit Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🍈 Jackfruit vs Rabbit 🐰</h1>
+
+    <button id="startBtn" class="start-btn">Start Animation</button>
+
+    <div class="scene">
+
+        <!-- Grass -->
+        <div class="grass"></div>
+
+        <!-- Second Tree -->
+        <div class="tree-area tree-2"></div>
+
+        <!-- Jackfruit Tree Area -->
+        <div class="tree-area"></div>
+
+        <!-- Jackfruit -->
+        <div class="jackfruit">
+            <img src="https://images.fruitassets.com/jackfruit.jpg" alt="Jackfruit" class="jackfruit-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <div class="jackfruit-fallback"></div>
+        </div>
+
+        <!-- Rabbit -->
+        <div class="rabbit">
+            <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=150&h=150&fit=crop" alt="Rabbit" class="rabbit-img">
+        </div>
+
+    </div>
+
+    <p class="text" id="message">
+        Click the button to start the animation!
+    </p>
+
+    <button id="nextPageBtn" class="next-page-btn" style="display: none;">Next Page →</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
