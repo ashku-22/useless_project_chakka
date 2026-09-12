@@ -79,7 +79,7 @@ N/A
 
 
 ## Team Contributions
-- Muhammed Ashkar: Developmemntal Work and coding
+- Muhammed Ashkar P A: Developmemntal Work and coding
 - Noble Biju: Project idea and suggestions,github management
 
 ---
