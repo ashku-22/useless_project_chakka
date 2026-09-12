@@ -56,18 +56,16 @@ start index.html
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](screenshot1.png)
-*Initial scene with rabbit and jackfruit tree*
+[Screenshot1](https://drive.google.com/file/d/1G6OyOSiDSOhAkz-ZdPwOHRAE2eXl878E/view?usp=drive_link)
+[Screenshot2](https://drive.google.com/file/d/1G706M27fw3Mi6AmW9hEkzv8ftVYkLZi0/view?usp=drive_link)
+[Screenshot3](https://drive.google.com/file/d/1JYNHJYZlqQ2aHszFNp-qfNGOleGsm75C/view?usp=drive_link)
 
-![Screenshot2](screenshot2.png)
-*Rabbit running towards the tree*
 
-![Screenshot3](screenshot3.png)
-*Jackfruit falling on the rabbit - RIP scene*
+
 
 # Diagrams
 ![Workflow](workflow.png)
-*Animation flow: Start → Rabbit Runs → Jackfruit Falls → RIP → Next Page*
+*Animation flow: Start → Rabbit Runs → Jackfruit Falls → RIP 
 
 For Hardware:
 
@@ -75,12 +73,10 @@ N/A
 
 ### Project Demo
 # Video
-[Add your demo video link here]
+[https://drive.google.com/file/d/1r1D7lIWeGdfIOhKODeOJa5ojofQJiWkL/view?usp=drive_link]
 *Full animation sequence showing the tragic fate of the rabbit*
 
-# Additional Demos
-- Interactive "Start Animation" button
-- "Next Page" feature for extended experience
+
 
 ## Team Contributions
 - Muhammed Ashkar: Developmemntal Work and coding
