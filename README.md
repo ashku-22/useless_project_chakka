@@ -64,8 +64,8 @@ For Software:
 
 
 # Diagrams
-![Workflow](workflow.png)
-*Animation flow: Start → Rabbit Runs → Jackfruit Falls → RIP 
+![Workflow]
+Animation flow: Start → Rabbit Runs → Jackfruit Falls → RIP 
 
 For Hardware:
 
