@@ -79,8 +79,8 @@ N/A
 
 
 ## Team Contributions
-- Muhammed Ashkar P A: Developmemntal Work and coding
-- Noble Biju: Project idea and suggestions,github management
+- Muhammed Ashkar P A: Developmemntal Work and Coding
+- Noble Biju: Project Idea and Suggestions, Github Management
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
